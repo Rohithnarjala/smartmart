@@ -1,0 +1,5 @@
+package com.project.authenticationservice;
+
+public class WebConfig {
+
+}

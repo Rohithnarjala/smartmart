@@ -1,0 +1,10 @@
+1575280310634	Rename package 'com.cognizant.productservice'
+1575280335030	Rename package 'com.cognizant.productservice.controller'
+1575280352005	Rename package 'com.cognizant.productservice.model'
+1575280368072	Rename package 'com.cognizant.productservice.repository'
+1575280385917	Rename package 'com.cognizant.productservice.security'
+1575280432178	Rename package 'com.cognizant.productservice.service'
+1575364826952	Delete element
+1575366329224	Delete element
+1575366368240	Delete element
+1575366588587	Rename type 'UserRespository'

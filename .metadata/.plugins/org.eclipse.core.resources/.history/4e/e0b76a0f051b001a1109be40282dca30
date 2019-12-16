@@ -1,0 +1,28 @@
+package com.project.productservice.model;
+
+public class ProductList {
+	
+	private int productId;
+	private int quantity;
+	public ProductList() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public int getProductId() {
+		return productId;
+	}
+	public void setProductId(int productId) {
+		this.productId = productId;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	@Override
+	public String toString() {
+		return "ProductList [productId=" + productId + ", quantity=" + quantity + "]";
+	}
+	
+}

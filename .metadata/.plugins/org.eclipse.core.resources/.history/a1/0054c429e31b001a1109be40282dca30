@@ -1,0 +1,17 @@
+# routing for account service
+zuul.routes.product-service.url=http://localhost:8083
+#zuul.routes.product-service.url=http://product-service:8083
+zuul.routes.product-service.sensitive-headers=Cookie,Set-Cookie
+
+# routing for loan service
+zuul.routes.authentication-service.url=http://localhost:8080
+#zuul.routes.authentication-service.url=http://authentication-service:8080
+zuul.routes.authentication-service.sensitive-headers=Cookie,Set-Cookie
+
+# disable load balancing
+ribbon.eureka.enabled=false
+
+# port for zuul proxy
+server.port=8082
+
+

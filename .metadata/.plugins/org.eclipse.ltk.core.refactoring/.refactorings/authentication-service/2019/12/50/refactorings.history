@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.project.authenticationservice.testing.smartMartTesting&apos; to &apos;smartMartMockTest&apos;&#x0D;&#x0A;- Original project: &apos;authentication-service&apos;&#x0D;&#x0A;- Original element: &apos;com.project.authenticationservice.testing.smartMartTesting&apos;&#x0D;&#x0A;- Renamed element: &apos;com.project.authenticationservice.testing.smartMartMockTest&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;smartMartTesting&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/test\/java&lt;com.project.authenticationservice.testing{smartMartTesting.java[smartMartTesting" matchStrategy="1" name="smartMartMockTest" qualified="false" references="true" similarDeclarations="false" stamp="1575976370375" textual="false" version="1.0"/>
+</session>

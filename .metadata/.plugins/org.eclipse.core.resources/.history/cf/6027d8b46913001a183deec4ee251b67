@@ -1,0 +1,32 @@
+package com.project.registrationservice.service;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.project.registrationservice.exception.UserAlreadyExistsException;
+import com.project.registrationservice.model.Users;
+import com.project.registrationservice.repository.UserRepository;
+
+@Service
+public class UserService {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(UserService.class);
+	
+	@Autowired
+	UserRepository userRepository;
+	
+	public boolean addUser(Users user) throws UserAlreadyExistsException {
+		boolean flag = false;
+		if (userRepository.findByUserId(user.getUserId()) != null) {
+			flag = false;
+			throw new UserAlreadyExistsException();
+
+		} else {
+			flag=true;
+			userRepository.save(user);
+		}
+		return flag;
+}
+}

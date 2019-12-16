@@ -1,0 +1,5 @@
+package com.project.registrationservice.controller;
+
+public class UserController {
+
+}

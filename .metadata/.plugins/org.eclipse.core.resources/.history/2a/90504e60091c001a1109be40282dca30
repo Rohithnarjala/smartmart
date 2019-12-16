@@ -1,0 +1,49 @@
+package com.project.productservice.service;
+
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.project.productservice.model.Offer;
+
+@Service
+public class OfferServiceImpl implements OfferService{
+
+	@Override
+	public void addOffer(Offer offer, int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateOffer(Offer offer, int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Offer getOffer(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteOffer(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Offer> getCurrentOffers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Offer> getOffers(Date date) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

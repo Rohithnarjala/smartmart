@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="UserControllerMockMvcTest" project="product-service" tests="5" started="1" failures="0" errors="2" ignored="0">
+  <testsuite name="com.cognizant.productservice.testing.UserControllerMockMvcTest" incomplete="true" displayname="UserControllerMockMvcTest" uniqueid="[engine:junit-jupiter]/[class:com.cognizant.productservice.testing.UserControllerMockMvcTest]">
+    <error>java.lang.IllegalStateException: Unable to find a @SpringBootConfiguration, you need to use @ContextConfiguration or @SpringBootTest(classes=...) with your test&#13;
+	at org.springframework.util.Assert.state(Assert.java:73)&#13;
+	at org.springframework.boot.test.context.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses(SpringBootTestContextBootstrapper.java:233)&#13;
+	at org.springframework.boot.test.context.SpringBootTestContextBootstrapper.processMergedContextConfiguration(SpringBootTestContextBootstrapper.java:149)&#13;
+	at org.springframework.test.context.support.AbstractTestContextBootstrapper.buildMergedContextConfiguration(AbstractTestContextBootstrapper.java:395)&#13;
+	at org.springframework.test.context.support.AbstractTestContextBootstrapper.buildDefaultMergedContextConfiguration(AbstractTestContextBootstrapper.java:312)&#13;
+	at org.springframework.test.context.support.AbstractTestContextBootstrapper.buildMergedContextConfiguration(AbstractTestContextBootstrapper.java:265)&#13;
+	at org.springframework.test.context.support.AbstractTestContextBootstrapper.buildTestContext(AbstractTestContextBootstrapper.java:108)&#13;
+	at org.springframework.boot.test.context.SpringBootTestContextBootstrapper.buildTestContext(SpringBootTestContextBootstrapper.java:99)&#13;
+	at org.springframework.test.context.TestContextManager.&lt;init&gt;(TestContextManager.java:137)&#13;
+	at org.springframework.test.context.TestContextManager.&lt;init&gt;(TestContextManager.java:122)&#13;
+	at org.junit.jupiter.engine.execution.ExtensionValuesStore.lambda$getOrComputeIfAbsent$0(ExtensionValuesStore.java:81)&#13;
+	at org.junit.jupiter.engine.execution.ExtensionValuesStore$MemoizingSupplier.get(ExtensionValuesStore.java:182)&#13;
+	at org.junit.jupiter.engine.execution.ExtensionValuesStore.getOrComputeIfAbsent(ExtensionValuesStore.java:84)&#13;
+	at org.junit.jupiter.engine.execution.ExtensionValuesStore.getOrComputeIfAbsent(ExtensionValuesStore.java:88)&#13;
+	at org.junit.jupiter.engine.execution.NamespaceAwareStore.getOrComputeIfAbsent(NamespaceAwareStore.java:61)&#13;
+	at org.springframework.test.context.junit.jupiter.SpringExtension.getTestContextManager(SpringExtension.java:213)&#13;
+	at org.springframework.test.context.junit.jupiter.SpringExtension.beforeAll(SpringExtension.java:77)&#13;
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$invokeBeforeAllCallbacks$8(ClassTestDescriptor.java:361)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.invokeBeforeAllCallbacks(ClassTestDescriptor.java:361)&#13;
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.before(ClassTestDescriptor.java:197)&#13;
+	at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.before(ClassTestDescriptor.java:77)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:132)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)&#13;
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)&#13;
+	at java.util.ArrayList.forEach(Unknown Source)&#13;
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)&#13;
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)&#13;
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)&#13;
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)&#13;
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)&#13;
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)&#13;
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:137)&#13;
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:89)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:541)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)&#13;
+	Suppressed: java.lang.IllegalStateException: Unable to find a @SpringBootConfiguration, you need to use @ContextConfiguration or @SpringBootTest(classes=...) with your test&#13;
+		at org.springframework.util.Assert.state(Assert.java:73)&#13;
+		at org.springframework.boot.test.context.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses(SpringBootTestContextBootstrapper.java:233)&#13;
+		at org.springframework.boot.test.context.SpringBootTestContextBootstrapper.processMergedContextConfiguration(SpringBootTestContextBootstrapper.java:149)&#13;
+		at org.springframework.test.context.support.AbstractTestContextBootstrapper.buildMergedContextConfiguration(AbstractTestContextBootstrapper.java:395)&#13;
+		at org.springframework.test.context.support.AbstractTestContextBootstrapper.buildDefaultMergedContextConfiguration(AbstractTestContextBootstrapper.java:312)&#13;
+		at org.springframework.test.context.support.AbstractTestContextBootstrapper.buildMergedContextConfiguration(AbstractTestContextBootstrapper.java:265)&#13;
+		at org.springframework.test.context.support.AbstractTestContextBootstrapper.buildTestContext(AbstractTestContextBootstrapper.java:108)&#13;
+		at org.springframework.boot.test.context.SpringBootTestContextBootstrapper.buildTestContext(SpringBootTestContextBootstrapper.java:99)&#13;
+		at org.springframework.test.context.TestContextManager.&lt;init&gt;(TestContextManager.java:137)&#13;
+		at org.springframework.test.context.TestContextManager.&lt;init&gt;(TestContextManager.java:122)&#13;
+		at org.junit.jupiter.engine.execution.ExtensionValuesStore.lambda$getOrComputeIfAbsent$0(ExtensionValuesStore.java:81)&#13;
+		at org.junit.jupiter.engine.execution.ExtensionValuesStore$MemoizingSupplier.get(ExtensionValuesStore.java:182)&#13;
+		at org.junit.jupiter.engine.execution.ExtensionValuesStore.remove(ExtensionValuesStore.java:98)&#13;
+		at org.junit.jupiter.engine.execution.NamespaceAwareStore.remove(NamespaceAwareStore.java:73)&#13;
+		at org.springframework.test.context.junit.jupiter.SpringExtension.afterAll(SpringExtension.java:89)&#13;
+		at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$invokeAfterAllCallbacks$12(ClassTestDescriptor.java:399)&#13;
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+		at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.lambda$invokeAfterAllCallbacks$13(ClassTestDescriptor.java:399)&#13;
+		at java.util.ArrayList.forEach(Unknown Source)&#13;
+		at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.invokeAfterAllCallbacks(ClassTestDescriptor.java:399)&#13;
+		at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.after(ClassTestDescriptor.java:221)&#13;
+		at org.junit.jupiter.engine.descriptor.ClassTestDescriptor.after(ClassTestDescriptor.java:77)&#13;
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:145)&#13;
+		at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)&#13;
+		at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:145)&#13;
+		... 29 more&#13;
+&#13;
+</error>
+    <testcase name="getUserByUserID" classname="com.cognizant.productservice.testing.UserControllerMockMvcTest" incomplete="true" displayname="getUserByUserID()" uniqueid="[engine:junit-jupiter]/[class:com.cognizant.productservice.testing.UserControllerMockMvcTest]/[method:getUserByUserID()]"/>
+    <testcase name="getUserByContactNumber" classname="com.cognizant.productservice.testing.UserControllerMockMvcTest" incomplete="true" displayname="getUserByContactNumber()" uniqueid="[engine:junit-jupiter]/[class:com.cognizant.productservice.testing.UserControllerMockMvcTest]/[method:getUserByContactNumber()]"/>
+    <testcase name="getAllUsersForBilling" classname="com.cognizant.productservice.testing.UserControllerMockMvcTest" incomplete="true" displayname="getAllUsersForBilling()" uniqueid="[engine:junit-jupiter]/[class:com.cognizant.productservice.testing.UserControllerMockMvcTest]/[method:getAllUsersForBilling()]"/>
+    <testcase name="getAllPendingAdminList" classname="com.cognizant.productservice.testing.UserControllerMockMvcTest" incomplete="true" displayname="getAllPendingAdminList()" uniqueid="[engine:junit-jupiter]/[class:com.cognizant.productservice.testing.UserControllerMockMvcTest]/[method:getAllPendingAdminList()]"/>
+  </testsuite>
+  <testsuite name="com.cognizant.productservice.testing.UserControllerMockMvcTest" time="0.0" displayname="UserControllerMockMvcTest" uniqueid="[engine:junit-vintage]/[runner:com.cognizant.productservice.testing.UserControllerMockMvcTest]">
+    <testcase name="com.cognizant.productservice.testing.UserControllerMockMvcTest" classname="com.cognizant.productservice.testing.UserControllerMockMvcTest" time="0.0" displayname="initializationError" uniqueid="[engine:junit-vintage]/[runner:com.cognizant.productservice.testing.UserControllerMockMvcTest]/[test:initializationError(com.cognizant.productservice.testing.UserControllerMockMvcTest)]">
+      <error>org.mockito.exceptions.base.MockitoException: 
+
+No tests found in UserControllerMockMvcTest
+Is the method annotated with @Test?
+Is the method public?
+&#13;
+	at org.mockito.internal.runners.RunnerFactory.create(RunnerFactory.java:75)&#13;
+	at org.mockito.internal.runners.RunnerFactory.createStrict(RunnerFactory.java:40)&#13;
+	at org.mockito.junit.MockitoJUnitRunner.&lt;init&gt;(MockitoJUnitRunner.java:154)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)&#13;
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)&#13;
+	at org.junit.internal.builders.AnnotatedBuilder.buildRunner(AnnotatedBuilder.java:104)&#13;
+	at org.junit.vintage.engine.discovery.DefensiveAllDefaultPossibilitiesBuilder$DefensiveAnnotatedBuilder.buildRunner(DefensiveAllDefaultPossibilitiesBuilder.java:113)&#13;
+	at org.junit.internal.builders.AnnotatedBuilder.runnerForClass(AnnotatedBuilder.java:86)&#13;
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)&#13;
+	at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:26)&#13;
+	at org.junit.vintage.engine.discovery.DefensiveAllDefaultPossibilitiesBuilder.runnerForClass(DefensiveAllDefaultPossibilitiesBuilder.java:56)&#13;
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)&#13;
+	at org.junit.vintage.engine.discovery.TestClassRequestResolver.createRunnerTestDescriptor(TestClassRequestResolver.java:55)&#13;
+	at org.junit.vintage.engine.discovery.VintageDiscoverer.lambda$discover$0(VintageDiscoverer.java:53)&#13;
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)&#13;
+	at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)&#13;
+	at java.util.Iterator.forEachRemaining(Unknown Source)&#13;
+	at java.util.Spliterators$IteratorSpliterator.forEachRemaining(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)&#13;
+	at java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(Unknown Source)&#13;
+	at java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)&#13;
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(Unknown Source)&#13;
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(Unknown Source)&#13;
+	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)&#13;
+	at java.util.stream.ReferencePipeline.forEach(Unknown Source)&#13;
+	at org.junit.vintage.engine.discovery.VintageDiscoverer.discover(VintageDiscoverer.java:55)&#13;
+	at org.junit.vintage.engine.VintageTestEngine.discover(VintageTestEngine.java:62)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.discoverEngineRoot(DefaultLauncher.java:177)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.discoverRoot(DefaultLauncher.java:164)&#13;
+	at org.junit.platform.launcher.core.DefaultLauncher.discover(DefaultLauncher.java:120)&#13;
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.&lt;init&gt;(JUnit5TestReference.java:45)&#13;
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestLoader.createUnfilteredTest(JUnit5TestLoader.java:76)&#13;
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestLoader.createTest(JUnit5TestLoader.java:66)&#13;
+	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestLoader.loadTests(JUnit5TestLoader.java:53)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:525)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:763)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:463)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:209)&#13;
+Caused by: java.lang.reflect.InvocationTargetException&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)&#13;
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)&#13;
+	at org.mockito.internal.runners.util.RunnerProvider.newInstance(RunnerProvider.java:27)&#13;
+	at org.mockito.internal.runners.RunnerFactory.create(RunnerFactory.java:69)&#13;
+	... 42 more&#13;
+Caused by: org.junit.runners.model.InitializationError&#13;
+	at org.junit.runners.ParentRunner.validate(ParentRunner.java:418)&#13;
+	at org.junit.runners.ParentRunner.&lt;init&gt;(ParentRunner.java:84)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.&lt;init&gt;(BlockJUnit4ClassRunner.java:65)&#13;
+	at org.mockito.internal.runners.DefaultInternalRunner$1.&lt;init&gt;(DefaultInternalRunner.java:28)&#13;
+	at org.mockito.internal.runners.DefaultInternalRunner.&lt;init&gt;(DefaultInternalRunner.java:28)&#13;
+	... 48 more&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

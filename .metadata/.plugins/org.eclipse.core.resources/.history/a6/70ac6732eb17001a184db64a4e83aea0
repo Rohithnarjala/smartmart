@@ -1,0 +1,40 @@
+package com.project.productservice.service;
+
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.project.productservice.model.Product;
+import com.project.productservice.repository.ProductRepository;
+
+@Service
+public class ProductServiceImpl implements ProductService {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(ProductServiceImpl.class);
+	@Autowired
+	ProductRepository productRepository;
+	@Override
+	public List<Product> getAllProducts() {
+		LOGGER.info("Start");
+		LOGGER.info("End");
+		return productRepository.findAll();
+	}
+	@Override
+	public void addProduct(Product product) {
+		LOGGER.info("Start");
+		LOGGER.info("End");
+		productRepository.save(product);
+		
+	}
+	@Override
+	public void updateProduct(Product product) {
+		LOGGER.info("Start");
+		LOGGER.info("End");
+		productRepository.save(product);
+		
+	}
+
+}

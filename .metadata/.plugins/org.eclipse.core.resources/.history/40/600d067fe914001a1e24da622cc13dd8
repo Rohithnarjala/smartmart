@@ -1,0 +1,37 @@
+package com.cognizant.productservice.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.cognizant.productservice.repository.UserRepository;
+import com.project.productservice.model.Users;
+
+@Service
+public class UserService {
+	@Autowired
+	UserRepository userRepository;
+
+	public UserService(UserRepository userRepository) {
+		super();
+		this.userRepository = userRepository;
+	}
+
+	@Transactional
+	public List<Users> getAllUsers() {
+		return userRepository.findAll();
+	}
+
+	@Transactional
+	public Users getUserByID(String userID) {
+		return userRepository.findByUserID(userID);
+	}
+
+	@Transactional
+	public boolean userExists(String userID) {
+		return userRepository.existsByUserID(userID);
+	}
+
+}

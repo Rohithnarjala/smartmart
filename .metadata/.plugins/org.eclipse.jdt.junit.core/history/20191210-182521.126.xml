@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ProductServiceMockTest" project="product-service" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.cognizant.productservice.testing.ProductServiceMockTest" time="0.048" displayname="ProductServiceMockTest" uniqueid="[engine:junit-vintage]/[runner:com.cognizant.productservice.testing.ProductServiceMockTest]">
+    <testcase name="MockTestgetAllUsersForBilling" classname="com.cognizant.productservice.testing.ProductServiceMockTest" time="0.024" displayname="MockTestgetAllUsersForBilling" uniqueid="[engine:junit-vintage]/[runner:com.cognizant.productservice.testing.ProductServiceMockTest]/[test:MockTestgetAllUsersForBilling(com.cognizant.productservice.testing.ProductServiceMockTest)]"/>
+    <testcase name="MockTestgetAllPendingAdminList" classname="com.cognizant.productservice.testing.ProductServiceMockTest" time="0.005" displayname="MockTestgetAllPendingAdminList" uniqueid="[engine:junit-vintage]/[runner:com.cognizant.productservice.testing.ProductServiceMockTest]/[test:MockTestgetAllPendingAdminList(com.cognizant.productservice.testing.ProductServiceMockTest)]"/>
+    <testcase name="MockTestmodifyApproval" classname="com.cognizant.productservice.testing.ProductServiceMockTest" time="0.019" displayname="MockTestmodifyApproval" uniqueid="[engine:junit-vintage]/[runner:com.cognizant.productservice.testing.ProductServiceMockTest]/[test:MockTestmodifyApproval(com.cognizant.productservice.testing.ProductServiceMockTest)]"/>
+  </testsuite>
+  <testsuite name="Unrooted Tests" incomplete="true" displayname="Unrooted Tests">
+    <testcase name="com.cognizant.productservice.testing.ProductServiceMockTest" classname="com.cognizant.productservice.testing.ProductServiceMockTest" incomplete="true" dynamicTest="true" displayname="unnecessary Mockito stubbings" uniqueid="[engine:junit-vintage]/[runner:com.cognizant.productservice.testing.ProductServiceMockTest]/[dynamic:unnecessary Mockito stubbings(com.cognizant.productservice.testing.ProductServiceMockTest)]"/>
+  </testsuite>
+</testrun>

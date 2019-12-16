@@ -1,0 +1,77 @@
+version: '3'
+services:
+  smartmart-mysql:
+    image: mysql:8.0.18
+    ports:
+      - "33063:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - D:/smartshop/smartmart/smartmartdemo:/var/lib/mysql
+      - ./dbscripts:/docker-entrypoint-initdb.d
+       
+  eureka-discovery-service:
+    image: eureka-discovery-app
+    build: ./microservices/eureka-discovery-service
+    ports:
+      - 8761:8761
+      
+  authentication-service:
+    image: authentication-app
+    build: ./microservices/authentication-service
+    ports:
+      - 8080:8080
+    depends_on:
+      - smartmart-mysql
+      - eureka-discovery-service
+    links:
+      - smartmart-mysql
+      - eureka-discovery-service
+      
+  product-service:
+    image: product-app
+    build: ./microservices/product-service
+    ports:
+      - 8083:8083
+    depends_on:
+      - smartmart-mysql
+      - eureka-discovery-service
+    links:
+      - smartmart-mysql
+      - eureka-discovery-service
+      
+  zuul-gateway:
+    image: zuul-gateway
+    build: ./microservices/zuul-gateway
+    ports:
+      - 8082:8082
+    depends_on:
+      - smartmart-mysql
+      - eureka-discovery-service
+      - product-service
+      - authentication-service
+      
+    links:
+      - smartmart-mysql
+      - eureka-discovery-service
+      - authentication-service
+      - product-service
+      
+  angular:
+    image: angular-app
+    build: ./webapp/dist
+    ports:
+      - 4200:80
+    depends_on:
+      - smartmart-mysql
+      - eureka-discovery-service
+      - product-service
+      - authentication-service
+      - zuul-gateway
+      
+    links:
+      - smartmart-mysql
+      - eureka-discovery-service
+      - authentication-service
+      - product-service
+      - zuul-gateway

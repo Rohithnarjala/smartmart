@@ -1,0 +1,6 @@
+1575018323630	Rename resource 'signup-service'
+1575018416678	Delete resource 'authentication-service'
+1575025088947	Delete resource 'authentication-service'
+1575119185006	Delete resource 'registration-service'
+1575119208044	Delete resource 'zuul-gateway'
+1575119218547	Delete resource 'eureka-discovery-service'

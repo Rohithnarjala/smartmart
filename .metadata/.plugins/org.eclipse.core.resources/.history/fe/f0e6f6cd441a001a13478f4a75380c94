@@ -1,0 +1,79 @@
+package com.project.productservice.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.project.productservice.model.Bill;
+import com.project.productservice.model.BillDetails;
+import com.project.productservice.model.BillFetch;
+import com.project.productservice.model.Product;
+import com.project.productservice.model.ProductDetails;
+import com.project.productservice.model.Users;
+import com.project.productservice.repository.BillRepository;
+import com.project.productservice.repository.ProductRepository;
+import com.project.productservice.repository.UserRepository;
+
+@Service
+public class BillServiceImpl implements BillService {
+	private static final Logger LOGGER = LoggerFactory.getLogger(BillServiceImpl.class);
+	@Autowired
+	BillRepository billRepository;
+	@Autowired
+	UserRepository  userRepository;
+	@Autowired
+	ProductRepository  productRepository;
+	@Override
+	public List<Bill> getAllBills() {
+		// TODO Auto-generated method stub
+		LOGGER.info("start");
+		LOGGER.info("End");
+		return billRepository.findAll();
+	}
+	
+	@Override
+	public void userBills(BillFetch userBill) {
+		// TODO Auto-generated method stub
+		int total = 0;
+		Bill bill = new Bill();
+		bill.setId(userBill.getBillId());
+		bill.setPurchaseDate(userBill.getPurchaseDate());
+		Users userDetails = new Users();
+		userDetails = userRepository.findById(userBill.getUserId()).get();
+		bill.setUser(userDetails);
+		
+		billRepository.save(bill);
+		
+	
+		Bill bill1 = billRepository.findById(userBill.getBillId()).get();
+	
+		List<BillDetails> billDetailsList = new ArrayList<BillDetails>();
+	
+		
+		int billDetailsId = billRepository.findMaximunBillDetailsId();
+	
+		for(int i=0; i<userBill.getProductList().size() ;i++) {	
+				ProductDetails pd = userBill.getProductList().get(i);
+				Product product = productRepository.findById(pd.getProductId()).get();
+				int rate = product.getRatePerQuantity();
+				int quantity = pd.getQuantity();
+				total+=(rate * quantity);
+				System.out.println(pd.getQuantity());
+				billDetailsList.add( new BillDetails(++billDetailsId, userBill.getBillId(), pd.getProductId(), pd.getQuantity()));
+				System.out.println(billDetailsList);
+		}
+		
+		bill1.setTotalAmount(total);
+		bill1.setRewardPoints((total/100) *20);
+		bill1.setBillDetailsList(billDetailsList);
+		
+			
+		billRepository.save(bill1);
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.project.productservice.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.project.productservice.model.Users;
+
+
+@Repository
+public interface UserRespository extends JpaRepository<Users, Integer>{
+}

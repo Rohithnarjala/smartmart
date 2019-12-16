@@ -1,0 +1,14 @@
+package com.project.signupservice;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+@EnableDiscoveryClient
+public class SignupServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SignupServiceApplication.class, args);
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.project.productservice.service;
+
+import java.util.List;
+
+import com.project.productservice.model.Bill;
+
+public interface BillService {
+
+	public List<Bill> getAllBills();
+
+}

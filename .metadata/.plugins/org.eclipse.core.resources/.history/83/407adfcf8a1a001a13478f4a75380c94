@@ -1,0 +1,65 @@
+package com.project.productservice.model;
+
+import java.util.Date;
+import java.util.List;
+
+public class UserBill {
+	private int userId;
+	private float totalAmount;
+	private Date purchaseDate;
+	private List<ProductList> productList;
+	private float rewardpoints;
+	public UserBill() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public UserBill(int userId, float totalAmount, Date purchaseDate, List<ProductList> productList,
+			float rewardpoints) {
+		super();
+		this.userId = userId;
+		this.totalAmount = totalAmount;
+		this.purchaseDate = purchaseDate;
+		this.productList = productList;
+		this.rewardpoints = rewardpoints;
+	}
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+	public float getTotalAmount() {
+		return totalAmount;
+	}
+	public void setTotalAmount(float totalAmount) {
+		this.totalAmount = totalAmount;
+	}
+	public Date getPurchaseDate() {
+		return purchaseDate;
+	}
+	public void setPurchaseDate(Date purchaseDate) {
+		this.purchaseDate = purchaseDate;
+	}
+	public List<ProductList> getProductList() {
+		return productList;
+	}
+	public void setProductList(List<ProductList> productList) {
+		this.productList = productList;
+	}
+	public float getRewardpoints() {
+		return rewardpoints;
+	}
+	public void setRewardpoints(float rewardpoints) {
+		this.rewardpoints = rewardpoints;
+	}
+	@Override
+	public String toString() {
+		return "UserBill [userId=" + userId + ", totalAmount=" + totalAmount + ", purchaseDate=" + purchaseDate
+				+ ", productList=" + productList + ", rewardpoints=" + rewardpoints + "]";
+	}
+	
+	
+	
+}
+
+

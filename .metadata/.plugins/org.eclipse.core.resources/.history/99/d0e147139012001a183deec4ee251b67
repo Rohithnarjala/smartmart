@@ -1,0 +1,5 @@
+package com.project.registrationservice.repository;
+
+public class UserRepository {
+
+}

@@ -1,0 +1,5 @@
+package com.cognizant.productservice.testing;
+
+public class UserControllerMockMvcTest {
+
+}

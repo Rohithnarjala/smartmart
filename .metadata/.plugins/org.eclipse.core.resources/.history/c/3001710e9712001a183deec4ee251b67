@@ -1,0 +1,5 @@
+package com.project.authenticationservice.model;
+
+public class Users {
+
+}

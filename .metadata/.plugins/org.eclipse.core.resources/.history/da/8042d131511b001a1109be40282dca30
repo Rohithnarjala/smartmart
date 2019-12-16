@@ -1,0 +1,15 @@
+package com.project.productservice.service;
+
+import java.util.List;
+
+import com.project.productservice.model.Users;
+
+
+
+public interface UserService {
+	public List<Users> getAllPendingAdminList();
+
+	public void modifyApproval(Users user);
+
+	public List<Users> getAllUsersForBilling();
+}

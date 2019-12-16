@@ -1,0 +1,42 @@
+package com.cognizant.productservice.testing;
+
+import static org.mockito.Mockito.when;
+
+import java.util.List;
+
+import org.junit.runner.RunWith;
+import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.project.productservice.model.Users;
+import com.project.productservice.repository.UserRepository;
+import com.project.productservice.service.AppUserDetailsService;
+
+@RunWith(MockitoJUnitRunner.class)
+@SpringBootTest
+public class ProductServiceMockTest {
+	private static final Logger LOGGER = LoggerFactory.getLogger(ProductServiceMockTest.class);
+	UserRepository repository = Mockito.mock(UserRepository.class);
+	AppUserDetailsService service = new AppUserDetailsService(repository);
+	
+	public List<Users> MockTestgetAllPendingAdminList() {
+		when(repository.getAllPendingAdminList()).thenReturn(null);
+		return repository.getAllPendingAdminList();
+	}
+	
+//	public void MockTestmodifyApproval(Users user) {
+//		LOGGER.info("Start");
+//		userRepository.save(user);
+//		LOGGER.info("End");
+//		
+//	}
+//	
+//	public List<Users> MockTestgetAllUsersForBilling() {
+//		// TODO Auto-generated method stub
+//		return userRepository.getAllUsersforbilling();
+//	}
+
+}

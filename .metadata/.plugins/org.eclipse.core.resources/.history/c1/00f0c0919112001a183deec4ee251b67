@@ -1,0 +1,9 @@
+package com.project.registrationservice.repository;
+
+import org.springframework.stereotype.Repository;
+import com.project.registrationservice.model.Users;
+import org.springframework.data.jpa.repository.JpaRepository;
+@Repository
+public interface UserRepository  extends JpaRepository<Users, Integer>{
+
+}

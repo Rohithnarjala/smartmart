@@ -1,0 +1,31 @@
+package com.cognizant.productservice.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.cognizant.productservice.model.Product;
+
+
+@Repository
+public interface ProductRepository extends JpaRepository<Product, String> {
+	
+	Product findByName(String name);
+	Product findByCode(String code);
+	boolean existsByName(String name);
+	boolean existsByCode(String code);
+	List<Product> findAllByType(int type);
+	
+	@Query(nativeQuery = true, value = "SELECT * FROM product ORDER BY pt_name ASC;")
+	List<Product> getSortByName();
+	
+	@Query(nativeQuery = true, value = "SELECT * FROM product ORDER BY pt_rate_per_quantity ASC;")
+	List<Product> getSortByPrice();
+	
+	@Query(nativeQuery = true, value = "SELECT * FROM product ORDER BY pt_stock_count DESC;")
+	List<Product> getSortByAvailability();
+	
+	
+}

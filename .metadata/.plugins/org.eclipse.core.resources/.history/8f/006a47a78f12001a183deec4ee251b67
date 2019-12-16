@@ -1,0 +1,79 @@
+package com.project.registrationservice.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+
+@Entity
+@Table(name="user")
+public class Users {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="us_id")
+	@NotNull
+	private int id;
+	
+	@Column(name="us_first_name")
+	@NotNull
+	private String firstName;
+	
+	@Column(name="us_last_name")
+	@NotNull
+	private String lastName;
+	
+	@Column(name="us_age")
+	@NotNull
+	private int age;
+	
+	@Column(name="us_gender")
+	@NotNull
+	private String gender;
+	
+	@Column(name="us_contact_number")
+	@NotNull
+	private int contactNumber;
+	
+	@Column(name="us_user_id")
+	@NotNull
+	private String userId;
+	
+	@Column(name="us_password")
+	@NotNull
+	private String password;
+	
+	@Column(name="us_user_type")
+	@NotNull
+	private String userType;
+	
+	@Column(name="us_status")
+	@NotNull
+	private String status;
+	
+	@Column(name="us_question_1")
+	//@NotNull
+	private String question1;
+	
+	@Column(name="us_answer_1")
+	@NotNull
+	private String answer1;
+	
+	@Column(name="us_question_2")
+	//@NotNull
+	private String question2;
+	
+	@Column(name="us_answer_2")
+	@NotNull
+	private String answer2;
+	
+	@Column(name="us_question_3")
+	//@NotNull
+	private String question3;
+	
+	@Column(name="us_answer_3")
+	@NotNull
+	private String answer3;
+}

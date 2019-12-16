@@ -1,0 +1,57 @@
+package com.project.authenticationservice.testing;
+
+import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.test.web.servlet.MockMvc;
+
+import com.project.authenticationservice.controller.AuthenticationController;
+import com.project.authenticationservice.model.Users;
+import com.project.authenticationservice.repository.UsersRepository;
+import com.project.authenticationservice.security.AppUserDetailsService;
+import static org.mockito.Mockito.when;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+
+
+@RunWith(MockitoJUnitRunner.class)
+@SpringBootTest
+public class smartMartTesting {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(smartMartTesting.class);
+	UsersRepository repository = Mockito.mock(UsersRepository.class);
+	AppUserDetailsService service = new AppUserDetailsService(repository);
+
+	@Test
+	public void mockTestLoadUserByUsername() {
+		LOGGER.info("Start");
+		when(repository.findByUserId("rohith")).thenReturn(createUser());
+		UserDetails user = service.loadUserByUsername("rohith");
+		String expected = "$2a$10$R/lZJuT9skteNmAku9Y7aeutxbOKstD5xE5bHOf74M2PHZipyt3yK";
+		assertEquals(expected, user.getPassword());
+		LOGGER.info("End");
+	}
+	private Users createUser() {
+		Users user = new Users(2, "rohith", "narjala", 21,"Male",0, null,"rohith",
+				"$2a$10$R/lZJuT9skteNmAku9Y7aeutxbOKstD5xE5bHOf74M2PHZipyt3yK",null,null,null,null,null,null,null);
+		return user;
+	}
+	@Test(expected = UsernameNotFoundException.class)
+	public void testLoadByUserNameNotFoundException() throws UsernameNotFoundException {
+		when(repository.findByUserId("rohith")).thenReturn(null);
+		service.loadUserByUsername("rohith");
+	}
+
+	
+}
