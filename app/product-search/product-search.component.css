@@ -1,0 +1,11 @@
+.jumbotron {
+	background-image: url("https://images.unsplash.com/photo-1475275083424-b4ff81625b60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+	background-size: cover;
+	padding-top:150px;
+  }
+  .h6{
+      color:rgb(248, 46, 46);
+  }
+
+
+  

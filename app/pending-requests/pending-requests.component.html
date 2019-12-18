@@ -1,0 +1,41 @@
+<div class="align">
+<div class="container text-alignment mt-5">
+    <div class="alert bg-danger alert-box-requirement text-white mr-5">
+        Pending ShopManager Requests
+    </div>
+    <!-- <span *ngIf="pendingAdminList == null; else elseBlock">
+            <div
+                class=" col-sm-12 col-md-12 col-lg-12 cartempty-color border mt-5  m-2 p-2 rounded cartempty-color border  ">
+                <h6>No requests to be Approved</h6>
+            </div>
+        </span>
+        <ng-template #elseBlock> -->
+    <div class="mr-5">
+        <table class="table table-align-center">
+            <thead>
+                <tr>
+                    <th>User Name</th>
+                    <th>First Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Contact Number</th>
+                    <th>Pending List</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let adminList of pendingAdminList">
+                    <td>{{adminList.userId}}</td>
+                    <td>{{adminList.firstName}}</td>
+                    <td>{{adminList.age}}</td>
+                    <td>{{adminList.gender}}</td>
+                    <td>{{adminList.contactNumber}}</td>
+                    <td><button type="submit" class="btn btn-success text-white" (click)="approve(adminList)">Approve</button></td>
+                    <td><button type="submit" class="btn btn-danger text-white"  (click)="deny(adminList)">Reject</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<!-- </ng-template> -->
+</div>
+</div>
+

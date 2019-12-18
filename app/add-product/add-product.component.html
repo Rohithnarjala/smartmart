@@ -1,0 +1,464 @@
+
+<section class="container-fluid  mt-5 bg-light">
+	<br><br>
+	<h1>Add Product</h1>
+	<form class="border  p-4" [formGroup]="addProductForm" method="post">
+		 <div class="row">
+			<!-- <div class="form-group col-lg-3 col-md-6 col-sm-12">
+				<label for="code-form">
+				   Enter code:<b class="text-danger">*</b>
+				</label>
+				<input type="text" 
+					   class="form-control" 
+					   id="code-form" 
+					   formControlName="code">
+				<div>
+					<span [style.visibility]="'hidden'" class="text-danger small">s</span>
+					<span class="text-danger small" *ngIf="addProductForm.get('code').invalid && addProductForm.get('code').touched">
+						Please enter valid code !
+					</span>
+				</div>
+			</div>  -->
+			<!-- <div class="form-group col-lg-4 col-md-6 col-sm-12">
+				<label for="name-form">
+					Enter Product Name<b class="text-danger">*</b>
+				</label>
+				<input type="text" 
+					   class="form-control" 
+					   id="name-form" 
+					   formControlName="name">
+				<div>
+					<span [style.visibility]="'hidden'" class="text-danger small">s</span>
+					<span class="text-danger small" *ngIf="addProductForm.get('name').invalid && addProductForm.get('name').touched">
+						Please enter valid product name!
+					</span>
+				</div>
+			</div>
+			<div class="form-group col-lg-4 col-md-6 col-sm-12">
+				<div class="row"> 
+					<label for="type">
+						Enter Product Type<b class="text-danger">*</b>
+					</label>
+				</div>
+				<div class="row ">
+					<select class="form-control" formControlName="type">
+            <option value="1">1-Home and Kitchen</option>
+            <option value="2">2-Bakery</option>
+            <option value="3">3-Fruits and vegetables</option>
+            <option value="4">4-snacks</option>
+					</select>
+				</div>
+			</div>
+      <div class="form-group col-lg-4 col-md-6 col-sm-12">
+				<label for="brand-form">
+					Enter Product Brand<b class="text-danger">*</b>
+				</label>
+				<input type="text" 
+					   class="form-control" 
+					   id="brand-form" 
+					   formControlName="brand">
+				<div>
+					<span [style.visibility]="'hidden'" class="text-danger small">s</span>
+					<span class="text-danger small" *ngIf="addProductForm.get('brand').invalid && addProductForm.get('brand').touched">
+						Please enter valid product brand name!
+					</span>
+				</div>
+			</div>
+		</div>
+  
+    <div class="row">
+			<div class="form-group col-lg-3 col-md-6 col-sm-12">
+				<label for="quantity-type-form">
+				   Enter Quantity Type:<b class="text-danger">*</b>
+				</label>
+        <div class="row ">
+            <select class="form-control" formControlName="type">
+                  <option value="1">1-numbers</option>
+                  <option value="2">2-packets</option>
+                  <option value="3">3-kg's</option>
+            </select>
+        </div>
+				<div>
+					<span [style.visibility]="'hidden'" class="text-danger small">s</span>
+					<span class="text-danger small" *ngIf="addProductForm.get('type').invalid && addProductForm.get('type').touched">
+						Please enter valid type !
+					</span>
+				</div>
+      </div>
+      
+			<div class="form-group col-lg-3 col-md-6 col-sm-12">
+				<label for="rate-form">
+					Enter rate per quantity<b class="text-danger">*</b>
+				</label>
+				<input type="text" 
+					   class="form-control" 
+					   id="rate-form" 
+					   formControlName="ratePerQuantity">
+				<div>
+					<span [style.visibility]="'hidden'" class="text-danger small">s</span>
+					<span class="text-danger small" *ngIf="addProductForm.get('ratePerQuantity').invalid && addProductForm.get('ratePerQuantity').touched">
+						Please enter valid rate per quantity!
+					</span>
+				</div>
+      </div>
+      
+			<div class="form-group col-lg-3 col-md-6 col-sm-12">
+				<div class="row"> 
+					<label for="stockCount">
+						Enter Stock Count<b class="text-danger">*</b>
+					</label>
+				</div>
+				<input type="text" 
+					   class="form-control" 
+					   id="stock-count-form" 
+             formControlName="stockCount">
+        <div>
+        <span [style.visibility]="'hidden'" class="text-danger small">s</span>
+          <span class="text-danger small" *ngIf="addProductForm.get('stockCount').invalid && addProductForm.get('stockCount').touched">
+                Please enter valid stock count!
+          </span>
+        </div>
+      </div>
+      
+      <div class="form-group col-lg-3 col-md-6 col-sm-12">
+				<label for="add-date-form">
+					Enter Product add date:<b class="text-danger">*</b>
+				</label>
+				<input type="text" 
+					   class="form-control" 
+					   id="add-date-form" 
+					   formControlName="addDate">
+				<div>
+					<span [style.visibility]="'hidden'" class="text-danger small">s</span>
+					<span class="text-danger small" *ngIf="addProductForm.get('addDate').invalid && addProductForm.get('addDate').touched">
+						Please enter valid product add date!
+					</span>
+				</div>
+			</div>
+    </div>
+    
+    <div class="row">
+      <div class="form-group col-lg-3 col-md-6 col-sm-12">
+				<label for="aisle-form">
+					Enter aisle:<b class="text-danger">*</b>
+				</label>
+				<input type="text" 
+					   class="form-control" 
+					   id="aisle-form" 
+					   formControlName="aisle">
+				<div>
+					<span [style.visibility]="'hidden'" class="text-danger small">s</span>
+					<span class="text-danger small" *ngIf="addProductForm.get('aisle').invalid && addProductForm.get('aisle').touched">
+						Please enter valid aisle!
+					</span>
+				</div>
+			</div>
+      
+			<div class="form-group col-lg-3 col-md-6 col-sm-12">
+				<label for="shelf-form">
+					Enter shelf:<b class="text-danger">*</b>
+				</label>
+				<input type="text" 
+					   class="form-control" 
+					   id="shelf-form" 
+					   formControlName="shelf">
+				<div>
+					<span [style.visibility]="'hidden'" class="text-danger small">s</span>
+					<span class="text-danger small" *ngIf="addProductForm.get('shelf').invalid && addProductForm.get('shelf').touched">
+						Please enter valid shelf number!
+					</span>
+				</div>
+      </div>
+      
+		 
+      <div class="form-group col-lg-3 col-md-6 col-sm-12">
+				<label for="mfg-form">
+					Enter Product MFG Date:<b class="text-danger">*</b>
+				</label>
+				<input type="text" 
+					   class="form-control" 
+					   id="mfg-form" 
+					   formControlName="dateOfManufacture">
+				<div>
+					<span [style.visibility]="'hidden'" class="text-danger small">s</span>
+					<span class="text-danger small" *ngIf="addProductForm.get('dateOfManufacture').invalid && addProductForm.get('dateOfManufacture').touched">
+						Please enter valid mfg date!
+					</span>
+				</div>
+			</div>
+      
+      <div class="form-group col-lg-3 col-md-6 col-sm-12">
+				<label for="exp-form">
+					Enter Product EXP date:<b class="text-danger">*</b>
+				</label>
+				<input type="text" 
+					   class="form-control" 
+					   id="exp-form" 
+					   formControlName="dateOfExpiry">
+				<div>
+					<span [style.visibility]="'hidden'" class="text-danger small">s</span>
+					<span class="text-danger small" *ngIf="addProductForm.get('dateOfExpiry').invalid && addProductForm.get('dateOfExpiry').touched">
+						Please enter valid product add date!
+					</span>
+				</div>
+			</div>
+		</div>
+    
+    <div class="row">
+			<div class="form-group col-lg-12 col-md-12 col-sm-12">
+				<label for="image-form">
+					Enter Image url:<b class="text-danger">*</b>
+				</label>
+				<input type="text" 
+					   class="form-control" 
+					   id="image-form" 
+					   formControlName="image">
+        <div>
+					<span [style.visibility]="'hidden'" class="text-danger small">s</span>
+					<span class="text-danger small" *ngIf="addProductForm.get('image').invalid && addProductForm.get('image').touched">
+						Please enter valid product image url!
+					</span>
+				</div>
+			</div>
+    </div> -->
+    <div class="form-group col-lg-4 col-md-6 col-sm-12 pb-3">
+		<label for="name">
+			Enter Product Name<b class="text-danger">*</b>
+		</label>
+		<input type="text" 
+			   class="form-control" 
+			   id="name" 
+			   formControlName="name" placeholder="Enter product name">
+			   <!-- <div class="errorMessage" *ngIf="addProductForm.get('name').errors?.required"> Name field is required</div> -->
+			   <div
+			   *ngIf="(!addProductForm.controls.name.valid && (addProductForm.controls.name.dirty || addProductForm.controls.name.touched))">
+			   <div class="errorMessage" *ngIf="addProductForm.controls.name.errors.required">
+				   <small>Product name
+					   is
+					   Required</small>
+			   </div>
+		   </div>
+			   <div class="errorMessage" *ngIf="addProductForm.get('name').errors?.maxlength"> <small>Name field should not exceed 20 characters</small></div>
+			   <div class="errorMessage" *ngIf="addProductForm.get('name').errors?.minlength"><small> Name field should be greater than 2 characters</small></div>
+	</div>
+	<div class="form-group col-lg-4 col-md-6 col-sm-12 pb-3">
+	   
+			<label for="type">
+				Enter Product Type<b class="text-danger">*</b>
+			</label>
+			<select class="form-control" formControlName="type">
+	<option value="1">1-Home and Kitchen</option>
+	<option value="2">2-Bakery</option>
+	<option value="3">3-Fruits and vegetables</option>
+	<option value="4">4-snacks</option>
+			</select>
+		
+	</div>
+<div class="form-group col-lg-4 col-md-6 col-sm-12 pb-3">
+		<label for="brand">
+			Enter Product Brand<b class="text-danger">*</b>
+		</label>
+		<input type="text" 
+			   class="form-control" 
+			   id="brand" 
+			   formControlName="brand"  placeholder="Enter product brand">
+			   <div
+			   *ngIf="(!addProductForm.controls.brand.valid && (addProductForm.controls.brand.dirty || addProductForm.controls.brand.touched))">
+			   <div class="errorMessage" *ngIf="addProductForm.controls.brand.errors.required">
+				   <small>Product brand
+					   is
+					   Required</small>
+			   </div>
+			   </div>
+	</div>
+</div>
+
+<div class="row">
+
+	<div class="form-group col-lg-3 col-md-6 col-sm-12 pb-3">
+		<label for="quantityType">
+		   Enter Quantity Type<b class="text-danger">*</b>
+		</label>
+	<select class="form-control" formControlName="quantityType">
+		  <option value="1">1-numbers</option>
+		  <option value="2">2-packets</option>
+		  <option value="3">3-kg's</option>
+	</select>
+</div>
+
+<div class="form-group col-lg-3 col-md-6 col-sm-12 pb-3">
+  
+	<label for="stockCount">
+	   Enter stock count<b class="text-danger">*</b>
+	</label>
+ 
+  <input type="text" 
+	   class="form-control" 
+	   id="stockCount" 
+	   formControlName="stockCount"  placeholder="Enter stock count">
+	   <div
+			   *ngIf="(!addProductForm.controls.stockCount.valid && (addProductForm.controls.stockCount.dirty || addProductForm.controls.stockCount.touched))">
+			   <div class="errorMessage" *ngIf="addProductForm.controls.stockCount.errors.required">
+				   <small>stock count
+					   is
+					   Required</small>
+			   </div>
+			   </div>
+</div>
+
+	<div class="form-group col-lg-3 col-md-6 col-sm-12 pb-3">
+		
+			<label for="ratePerQuantity">
+				Enter rate per quantity<b class="text-danger">*</b>
+			</label>
+		
+		<input type="text" 
+			   class="form-control" 
+			   id="ratePerQuantity" 
+	 formControlName="ratePerQuantity"  placeholder="Enter rate per quantity">
+	 <div
+	 *ngIf="(!addProductForm.controls.ratePerQuantity.valid && (addProductForm.controls.ratePerQuantity.dirty || addProductForm.controls.ratePerQuantity.touched))">
+	 <div class="errorMessage" *ngIf="addProductForm.controls.ratePerQuantity.errors.required">
+		 <small>price
+			 is
+			 Required</small>
+	 </div>
+	 </div>
+	 <div class="errorMessage" *ngIf="addProductForm.controls.ratePerQuantity.errors?.pattern"> price should be a number
+	 </div>
+</div>
+
+<div class="form-group col-lg-3 col-md-6 col-sm-12 pb-3">
+		<label for="addDate">
+			Enter Product add date<b class="text-danger">*</b>
+		</label>
+		<input type="text" 
+			   class="form-control" 
+			   id="addDate" 
+			   formControlName="addDate"  placeholder="Enter product add date">
+			   <div
+			   *ngIf="(!addProductForm.controls.addDate.valid && (addProductForm.controls.addDate.dirty || addProductForm.controls.addDate.touched))">
+			   <div class="errorMessage" *ngIf="addProductForm.controls.addDate.errors.required">
+				   <small>Date
+					   is
+					   Required</small>
+			   </div>
+		   </div>
+			<div class="errorMessage" *ngIf="addProductForm.controls.addDate.errors?.pattern"> Date should be in
+				mm/dd/yyyy format</div>
+	</div>
+</div>
+
+<div class="row">
+<div class="form-group col-lg-3 col-md-6 col-sm-12 pb-3">
+		<label for="aisle">
+			Enter aisle<b class="text-danger">*</b>
+		</label>
+		<input type="text" 
+			   class="form-control" 
+			   id="aisle" 
+			   formControlName="aisle"  placeholder="Enter aisle">
+			   <div
+			   *ngIf="(!addProductForm.controls.aisle.valid && (addProductForm.controls.aisle.dirty || addProductForm.controls.aisle.touched))">
+			   <div class="errorMessage" *ngIf="addProductForm.controls.aisle.errors.required">
+				   <small>Aisle
+					   is
+					   Required</small>
+			   </div>
+		   </div>
+			
+	</div>
+
+	<div class="form-group col-lg-3 col-md-6 col-sm-12 pb-3">
+		<label for="shelf">
+			Enter shelf<b class="text-danger">*</b>
+		</label>
+		<input type="text" 
+			   class="form-control" 
+			   id="shelf" 
+			   formControlName="shelf"  placeholder="Enter shelf">
+			   <div
+			   *ngIf="(!addProductForm.controls.shelf.valid && (addProductForm.controls.shelf.dirty || addProductForm.controls.shelf.touched))">
+			   <div class="errorMessage" *ngIf="addProductForm.controls.shelf.errors.required">
+				   <small>Shelf
+					   is
+					   Required</small>
+			   </div>
+		   </div>
+</div>
+
+ 
+<div class="form-group col-lg-3 col-md-6 col-sm-12 pb-3">
+		<label for="dateOfManufacture">
+			Enter Product MFG Date<b class="text-danger">*</b>
+		</label>
+		<input type="text" 
+			   class="form-control" 
+			   id="dateOfManufacture" 
+			   formControlName="dateOfManufacture"  placeholder="Enter date of manufacture">
+			   <div
+			   *ngIf="(!addProductForm.controls.dateOfManufacture.valid && (addProductForm.controls.dateOfManufacture.dirty || addProductForm.controls.dateOfManufacture.touched))">
+			   <div class="errorMessage" *ngIf="addProductForm.controls.dateOfManufacture.errors.required">
+				   <small>Date Of Manufacture
+					   is
+					   Required</small>
+			   </div>
+		   </div>
+			<div class="errorMessage" *ngIf="addProductForm.controls.dateOfManufacture.errors?.pattern"> Date should be in
+				mm/dd/yyyy format</div>
+	</div>
+
+<div class="form-group col-lg-3 col-md-6 col-sm-12 pb-3">
+		<label for="dateOfExpiry">
+			Enter Product EXP date<b class="text-danger">*</b>
+		</label>
+		<input type="text" 
+			   class="form-control" 
+			   id="dateOfExpiry" 
+			   formControlName="dateOfExpiry"  placeholder="Enter date of expiry">
+			   <div
+			   *ngIf="(!addProductForm.controls.dateOfExpiry.valid && (addProductForm.controls.dateOfExpiry.dirty || addProductForm.controls.dateOfExpiry.touched))">
+			   <div class="errorMessage" *ngIf="addProductForm.controls.dateOfExpiry.errors.required">
+				   <small>Date Of Expiry
+					   is
+					   Required</small>
+			   </div>
+		   </div>
+			<div class="errorMessage" *ngIf="addProductForm.controls.dateOfExpiry.errors?.pattern"> Date should be in
+				mm/dd/yyyy format</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="form-group col-lg-12 col-md-12 col-sm-12 pb-3">
+		<label for="image">
+			Enter Image url<b class="text-danger">*</b>
+		</label>
+		<input type="text" 
+			   class="form-control" 
+			   id="image" 
+			   formControlName="image"  placeholder="Enter image url">
+			   <div
+			   *ngIf="(!addProductForm.controls.image.valid && (addProductForm.controls.image.dirty || addProductForm.controls.image.touched))">
+			   <div class="errorMessage" *ngIf="addProductForm.controls.image.errors.required">
+				   <small>Image
+					   is
+					   Required</small>
+			   </div>
+		   </div>
+	</div>
+</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<button class="btn btn-primary" 
+						type="submit" 
+						value="submit" 
+						(click)="onSubmit(addProductForm)"
+						[disabled]="!addProductForm.valid"
+					   >Submit</button>
+			</div>
+		</div>
+	</form> <br><br>
+</section>
+
+

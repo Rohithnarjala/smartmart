@@ -1,0 +1,194 @@
+<section class="container-fluid  mt-5 bg-light">
+        <br><br>
+        <h1>Edit Product</h1>
+        <form class="border  p-4" [formGroup]="editProductForm" method="post">
+    
+             <div class="row">
+                <!-- <div class="form-group col-lg-3 col-md-6 col-sm-12">
+                    <label for="code-form">
+                       Enter code:
+                    </label>
+                    <input type="text" 
+                           class="form-control" 
+                           id="code-form" 
+                           formControlName="code">
+                    <div>
+                        <span [style.visibility]="'hidden'" class="text-danger small">s</span>
+                        <span class="text-danger small" *ngIf="editProductForm.get('code').invalid && editProductForm.get('code').touched">
+                            Please enter valid code !
+                        </span>
+                    </div>
+                </div>  -->
+                <div class="form-group col-lg-4 col-md-6 col-sm-12 pb-3">
+                    <label for="name">
+                        Enter Product Name<b class="text-danger">*</b>
+                    </label>
+                    <input type="text" 
+                           class="form-control" 
+                           id="name" 
+                           formControlName="name"  placeholder="Enter productname">
+                           <div class="errorMessage" *ngIf="editProductForm.get('name').errors?.required"> Name field is required</div>
+                           <div class="errorMessage" *ngIf="editProductForm.get('name').errors?.maxlength"> Name field should not exceed 20 characters</div>
+                           <div class="errorMessage" *ngIf="editProductForm.get('name').errors?.minlength"> Name field should be greater than 2 characters</div>
+                </div>
+                <div class="form-group col-lg-4 col-md-6 col-sm-12 pb-3">
+                   
+                        <label for="type">
+                            Enter Product Type<b class="text-danger">*</b>
+                        </label>
+                        <select class="form-control" formControlName="type">
+                <option value="1">1-Home and Kitchen</option>
+                <option value="2">2-Bakery</option>
+                <option value="3">3-Fruits and vegetables</option>
+                <option value="4">4-snacks</option>
+                        </select>
+                    
+                </div>
+          <div class="form-group col-lg-4 col-md-6 col-sm-12 pb-3">
+                    <label for="brand">
+                        Enter Product Brand<b class="text-danger">*</b>
+                    </label>
+                    <input type="text" 
+                           class="form-control" 
+                           id="brand" 
+                           formControlName="brand"  placeholder="Enter productbrand">
+                           <div class="errorMessage" *ngIf="editProductForm.get('brand').errors?.required"> Brand field is required</div>
+                </div>
+            </div>
+      
+        <div class="row">
+    
+                <div class="form-group col-lg-3 col-md-6 col-sm-12 pb-3">
+                    <label for="quantityType">
+                       Enter Quantity Type<b class="text-danger">*</b>
+                    </label>
+                <select class="form-control" formControlName="quantityType">
+                      <option value="1">1-numbers</option>
+                      <option value="2">2-packets</option>
+                      <option value="3">3-kg's</option>
+                </select>
+          </div>
+          
+          <div class="form-group col-lg-3 col-md-6 col-sm-12 pb-3">
+              
+                <label for="stockCount">
+                   Enter stock count<b class="text-danger">*</b>
+                </label>
+             
+              <input type="text" 
+                   class="form-control" 
+                   id="stockCount" 
+                   formControlName="stockCount"  placeholder="Enter stockCount">
+                   <div class="errorMessage" *ngIf="editProductForm.get('stockCount').errors?.required"> Stock count is required</div>
+            </div>
+          
+                <div class="form-group col-lg-3 col-md-6 col-sm-12 pb-3">
+                    
+                        <label for="ratePerQuantity">
+                            Enter rate per quantity<b class="text-danger">*</b>
+                        </label>
+                    
+                    <input type="text" 
+                           class="form-control" 
+                           id="ratePerQuantity" 
+                 formControlName="ratePerQuantity"  placeholder="Enter rate per quantity">
+                 <div class="errorMessage" *ngIf="editProductForm.get('ratePerQuantity').errors?.required"> price field is required</div>
+                 <div class="errorMessage" *ngIf="editProductForm.controls.ratePerQuantity.errors?.pattern"> price should be a number
+                 </div>
+          </div>
+          
+          <div class="form-group col-lg-3 col-md-6 col-sm-12 pb-3">
+                    <label for="addDate">
+                        Enter Product add date<b class="text-danger">*</b>
+                    </label>
+                    <input type="text" 
+                           class="form-control" 
+                           id="addDate" 
+                           formControlName="addDate"  placeholder="Enter add date">
+                           <div class="errorMessage" *ngIf="editProductForm.controls.addDate.errors?.required"> Date field is required
+                        </div>
+                        <div class="errorMessage" *ngIf="editProductForm.controls.addDate.errors?.pattern"> Date should be in
+                            mm/dd/yyyy format</div>
+                </div>
+        </div>
+        
+        <div class="row">
+          <div class="form-group col-lg-3 col-md-6 col-sm-12 pb-3">
+                    <label for="aisle">
+                        Enter aisle<b class="text-danger">*</b>
+                    </label>
+                    <input type="text" 
+                           class="form-control" 
+                           id="aisle" 
+                           formControlName="aisle"  placeholder="Enter aisle">
+                           <div class="errorMessage" *ngIf="editProductForm.get('aisle').errors?.required"> Please enter valid aisle</div>
+                        
+                </div>
+          
+                <div class="form-group col-lg-3 col-md-6 col-sm-12 pb-3">
+                    <label for="shelf">
+                        Enter shelf<b class="text-danger">*</b>
+                    </label>
+                    <input type="text" 
+                           class="form-control" 
+                           id="shelf" 
+                           formControlName="shelf"  placeholder="Enter shelf">
+                           <div class="errorMessage" *ngIf="editProductForm.get('shelf').errors?.required"> Please enter valid Shelf number</div>
+          </div>
+          
+             
+          <div class="form-group col-lg-3 col-md-6 col-sm-12 pb-3">
+                    <label for="dateOfManufacture">
+                        Enter Product MFG Date<b class="text-danger">*</b>
+                    </label>
+                    <input type="text" 
+                           class="form-control" 
+                           id="dateOfManufacture" 
+                           formControlName="dateOfManufacture"  placeholder="Enter date Of Manufacture">
+                           <div class="errorMessage" *ngIf="editProductForm.controls.dateOfManufacture.errors?.required"> Date field is required
+                        </div>
+                        <div class="errorMessage" *ngIf="editProductForm.controls.dateOfManufacture.errors?.pattern"> Date should be in
+                            mm/dd/yyyy format</div>
+                </div>
+          
+          <div class="form-group col-lg-3 col-md-6 col-sm-12 pb-3">
+                    <label for="dateOfExpiry">
+                        Enter Product EXP date<b class="text-danger">*</b>
+                    </label>
+                    <input type="text" 
+                           class="form-control" 
+                           id="dateOfExpiry" 
+                           formControlName="dateOfExpiry" placeholder="Enter date Of expiry">
+                           <div class="errorMessage" *ngIf="editProductForm.controls.dateOfExpiry.errors?.required"> Date field is required
+                        </div>
+                        <div class="errorMessage" *ngIf="editProductForm.controls.dateOfExpiry.errors?.pattern"> Date should be in
+                            mm/dd/yyyy format</div>
+                </div>
+            </div>
+        
+        <div class="row">
+                <div class="form-group col-lg-12 col-md-12 col-sm-12 pb-3">
+                    <label for="image">
+                        Enter Image url<b class="text-danger">*</b>
+                    </label>
+                    <input type="text" 
+                           class="form-control" 
+                           id="image" 
+                           formControlName="image" placeholder="Enter image url">
+                           <div class="errorMessage" *ngIf="editProductForm.get('image').errors?.required"> Please enter valid Image url</div>
+                </div>
+        </div>
+        
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <button class="btn btn-primary" 
+                            type="submit" 
+                            value="submit" 
+                            (click)="onSubmit(editProductForm)"
+                            [disabled]="!editProductForm.valid"
+                           >Submit</button>
+                </div>
+            </div>
+        </form> <br><br>
+    </section>
+    

@@ -1,0 +1,34 @@
+<div class="jumbotron ">
+    <div class="text-white ">
+        <h2>Find your product:</h2>
+    </div>
+    <div class="input-group md-form form-sm form-1 pl-0   ">
+        <div class="input-group-prepend ">
+            <span class="input-group-text purple lighten-3" id="basic-text1"><i class="material-icons align-middle "
+                    href="#">local_cafe</i></span>
+        </div>
+        <input class="form-control my-0 py-1" type="text" placeholder="Search your product" [(ngModel)]="searchString"
+            (keyup)="filterProduct()">
+    </div>
+    <div class="form-inline col-md-4 md-0 ml-auto">
+        <div class="h6">
+            <label for="sort">sort by</label>
+        </div>
+        <div class="">
+            <select id="sort" name="sort" class="custom-select" [(ngModel)]="sortType">
+                <option value="" [selected]="true" hidden>select</option>
+                <option value="name">By Name</option>
+                <option value="price">By Price</option>
+                <option value="stock">By Availability</option>
+                <option value="popular">By Popularity</option>
+            </select>
+            <button class="btn btn-info" (click)="sort()" type="button">Sort</button>
+        </div>
+
+    </div>
+    <div class="d-flex justify-content-end mt-4" *ngIf = "userType == 'O' || userType == 'A'">
+        <strong class="align-middle mr-3 text-white" >Offer Management : </strong>
+        <a class="btn btn-primary mr-3" routerLink="/offer-add">Add offer</a>
+        <a class="btn btn-info" routerLink="/offer-update">Update offer</a>
+        </div>
+</div>
